@@ -2,8 +2,7 @@
 Connect-X Agent V9 - REBUILT FROM V5 (bàn 6x7, inarow=4)
 ---------------------------------------------------------
 TƯ TƯỞNG:
-  Quay lại V5 (bộ search đã chứng minh ổn định) và CHỈ bổ sung 3 cải tiến
-  ÍT-MÀ-HIỆU-QUẢ. Không thêm modes, không hybrid, không trick rủi ro.
+  Quay lại V5 (bộ search đã chứng minh ổn định) và CHỈ bổ sung 3 cải tiến. Không thêm modes, không hybrid, không trick rủi ro.
 
 Cải tiến so với V5:
   (1) BỎ MCTS HYBRID
@@ -18,11 +17,11 @@ Cải tiến so với V5:
       - Vẫn giữ Allis claim-even/odd-threat (đã hợp lý ở V5).
 
   (3) FIX BUG TT MATE-DISTANCE
-      - V5/V7 lưu mate-score theo ply TUYỆT ĐỐI từ root. Cùng một position
+      - V5/V7 lưu mate-score theo ply tuyệt đối từ root. Cùng một position
         được reach từ nhiều ply khác nhau → lookup trả score sai → đôi khi
-        thấy "thắng" mà thực ra không phải, hoặc bỏ qua mate gần hơn.
+        thấy thắng mà thực ra không phải, hoặc bỏ qua mate gần hơn.
       - V9 normalize: store `score ± ply`, load `score ∓ ply`.
-        Đây là bug-fix có TÍNH ĐÚNG ĐẮN, không phải tuning.
+        Đây là bug-fix có tính đúng đắn, không phải tuning.
 
   (4) MOVE ORDERING ANTI-TRAP TOÀN PHẦN
       - V5 chỉ check ô ngay trên cùng cột (above) — bỏ sót gift moves
